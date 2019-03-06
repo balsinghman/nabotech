@@ -27,7 +27,7 @@ var connection = mysql.createConnection({
   user: 'root',
   password:'a5f7c674',
   database:'log'
-  
+
 });
 connection.connect(function(error){
   if(!!error){
@@ -199,7 +199,7 @@ sess=req.session
  var postData = req.body;
  var provider = req.body.provider;
  var email = req.body.email;  
- var token = '794231d1cf3cffb161e7d6bc2b04c83a';              ///////////////PASS  POSTMAN/////////////
+ var token = 'e44f9979a08f79b8cb97048cbfb34b22';              ///////////////PASS  POSTMAN/////////////
  var provider = 'airtel';
  // console.log(postData);
  var type =  'Mobile recharge';
