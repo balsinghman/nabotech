@@ -26,7 +26,7 @@ var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password:'a5f7c674',
-  database:'log1'
+  database:'log'
 });
 connection.connect(function(error){
   if(!!error){
