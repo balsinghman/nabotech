@@ -300,7 +300,243 @@ console.log(phone);
 });
 ////////////////////////////ENDS////////////////////////////////////////
 
+////////////////////////////////////Money Transfer///////////////////////
 
+app.post('/money', async function(req,res){
+sess=req.session
+ var account = req.body.account;                 ///////////////PASS ACCOUNT NO. BY  POSTMAN/////////////
+ // console.log(account);
+  var token = 'e44f9979a08f79b8cb97048cbfb34b22'; 
+
+ var amount = req.body.amount;                  ///////////////PASS AMOUNT BY  POSTMAN/////////////     
+ var provider = req.body.provider;              
+ var email = req.body.email;
+ var provider = 'balwinder';                      ///////////////SET PROVIDER HERE/////////////
+ // console.log(postData);
+ var type =  'Money Transfer';
+
+// var https = require('https');
+
+// var options = {
+//   'method': 'POST',
+//   'hostname': 'www.instantpay.in',
+//   'path': '/ws/dmi/remitter',
+//   'headers': {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   }
+// };
+
+// var req = https.request(options, function (res) {
+//   var chunks = [];
+
+//   res.on("data", function (chunk) {
+//     chunks.push(chunk);
+//   });
+
+//   res.on("end", function (chunk) {
+//     var body = Buffer.concat(chunks);
+//     console.log(body.toString());
+//   });
+
+//   res.on("error", function (error) {
+//     console.error(error);
+//   });
+// });
+
+// var postData =  "{\"token\":\"b6644fd088052d8e7515b471d267607c\",\"request\": {\"mobile\": \"9501932374\",\"name\":\"Balwinder\",\"surname\":\"singh\",\"pincode\":\"144406\",\"outletid\":1}}";
+// req.write(postData);
+// req.end();
+
+
+
+
+// var https = require('https');
+
+// var options = {
+//   'method': 'POST',
+//   'hostname': 'www.instantpay.in',
+//   'path': '/ws/dmi/remitter_validate',
+//   'headers': {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   }
+// };
+
+// var req = https.request(options, function (res) {
+//   var chunks = [];
+
+//   res.on("data", function (chunk) {
+//     chunks.push(chunk);
+//   });
+
+//   res.on("end", function (chunk) {
+//     var body = Buffer.concat(chunks);
+//     console.log(body.toString());
+//   });
+
+//   res.on("error", function (error) {
+//     console.error(error);
+//   });
+// });
+
+// var postData =  "{\"token\": \"b6644fd088052d8e7515b471d267607c\",\"request\": {\"remitterid\": \"2812312\",\"mobile\": \"9501932374\",\"otp\": \"23***8\",\"outletid\":1}}";
+// req.write(postData);
+// req.end();
+
+
+
+
+// var https = require('https');
+
+// var options = {
+//   'method': 'POST',
+//   'hostname': 'www.instantpay.in',
+//   'path': '/ws/dmi/beneficiary_register',
+//   'headers': {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   }
+// };
+
+// var req = https.request(options, function (res) {
+//   var chunks = [];
+
+//   res.on("data", function (chunk) {
+//     chunks.push(chunk);
+//   });
+
+//   res.on("end", function (chunk) {
+//     var body = Buffer.concat(chunks);
+//     console.log(body.toString());
+//   });
+
+//   res.on("error", function (error) {
+//     console.error(error);
+//   });
+// });
+
+// var postData =  "{\n\t\"token\"\t\t\t: \"b6644fd088052d8e7515b471d267607c\",\n\t\"request\"\t\t: \n\t{\n\t\t\"remitterid\"\t: \"2812312\",\n\t\t\"name\"\t\t\t: \"balwinder\",\n\t\t\"mobile\"\t\t: \"9501932374\",\n\t\t\"ifsc\"\t\t\t: \"PSIB0021332\",\n\t\t\"account\"\t\t: \"13321000002564\"\n\t\t,\"outletid\":1\n\t}\n}";
+// req.write(postData);
+// req.end();
+
+// var https = require('https');
+
+
+// var options = {
+//   'method': 'POST',
+//   'hostname': 'www.instantpay.in',
+//   'path': '/ws/dmi/beneficiary_resend_otp',
+//   'headers': {
+//     'Accept': 'application/json',
+//     'Content-Type': 'application/json'
+//   }
+// };
+
+// var req = https.request(options, function (res) {
+//   var chunks = [];
+
+//   res.on("data", function (chunk) {
+//     chunks.push(chunk);
+//   });
+
+//   res.on("end", function (chunk) {
+//     var body = Buffer.concat(chunks);
+//     console.log(body.toString());
+//   });
+
+//   res.on("error", function (error) {
+//     console.error(error);
+//   });
+// });
+
+// var postData =  "{\"token\": \"b6644fd088052d8e7515b471d267607c\", \"request\": {\"remitterid\": \"2812312\",\"beneficiaryid\": \"3653728\"}}";
+// req.write(postData);
+// req.end();
+
+
+
+
+
+
+
+
+// var https = require('https');
+
+
+// var options = {
+//   'method': 'POST',
+//   'hostname': 'www.instantpay.in',
+//   'path': '/ws/imps/account_validate',
+//   'headers': {
+//     'Content-Type': 'application/json',
+//     'Accept': 'application/json'
+//   }
+// };
+
+// var req = https.request(options, function (res) {
+//   var chunks = [];
+
+//   res.on("data", function (chunk) {
+//     chunks.push(chunk);
+//   });
+
+//   res.on("end", function (chunk) {
+//     var body = Buffer.concat(chunks);
+//     console.log(body.toString());
+//   });
+
+//   res.on("error", function (error) {
+//     console.error(error);
+//   });
+// });
+// var postData =  "{\"token\":\"b6644fd088052d8e7515b471d267607c\",\"request\":{\"remittermobile\":\"9501932374\",\"account\":\"133321000002564\",\"ifsc\":\"PSIB0021332\",\"agent  id\":\"123456\"}}";
+// req.write(postData);
+// req.end();
+
+
+
+
+
+var https = require('https');
+
+var options = {
+  'method': 'POST',
+  'hostname': 'www.instantpay.in',
+  'path': '/ws/imps/account_validate',
+  'headers': {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  }
+};
+
+var req = https.request(options, function (res) {
+  var chunks = [];
+
+  res.on("data", function (chunk) {
+    chunks.push(chunk);
+  });
+
+  res.on("end", function (chunk) {
+    var body = Buffer.concat(chunks);
+    console.log(body.toString());
+  });
+
+  res.on("error", function (error) {
+    console.error(error);
+  });
+});
+
+var postData =  "{\"token\":\"" + token +"\",\"request\":{\"remittermobile\":\"9501932374\",\"account\":\"13321000002564\",\"ifsc\":\"PSIB0021332\",\"agentid\":\"123456\"}}";
+
+req.write(postData);
+
+req.end();
+
+ var sql1 = "INSERT INTO recharge (account,amount,type,useremail,date,provider) VALUES (?,?,?,?,?,?)";
+           await database.query(sql1, [account,amount,type,email,date,provider]);
+           res.json({message: 'your money is transfered successfully'});
+});
 
 
 
