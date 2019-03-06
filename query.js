@@ -3,7 +3,7 @@ const {rowtojson} = require('./util')
 var config = {
     host     : 'localhost',
     user     : 'root',
-    password : '',
+    password : 'a5f7c674',
     database : 'log',
     debug: ['ComQueryPacket'/*, 'RowDataPacket'*/]
   }
