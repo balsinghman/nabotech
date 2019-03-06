@@ -285,7 +285,7 @@ var req = https.request(options, function (res) {
   });
 
   res.on("error", function (error) {
-    // console.error(error);
+    console.error(error);
   });
 });
 
@@ -298,4 +298,18 @@ console.log(phone);
   res.send({message : "recharge is done"});
 
 });
-//////////////////////////////////////////////////////////ENDS////////////////////////////////////////////////////////////////////
+////////////////////////////ENDS////////////////////////////////////////
+
+
+
+
+
+
+var server = app.listen(3000, function(){
+  console.log('listen to port 3000');
+});
+
+
+
+
+
