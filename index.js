@@ -271,6 +271,7 @@ var options = {
   }
 };
 
+console.log(options);
 var req = https.request(options, function (res) {
   var chunks = [];
 
