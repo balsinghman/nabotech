@@ -295,7 +295,7 @@ console.log(phone);
 // res.json(data);
  var sql1 = "INSERT INTO recharge (account, amount,type,useremail,date,provider) VALUES (?,?,?,?,?,?)";
            await database.query(sql1, [phone,amount,type,email,date,provider]);
-  res.send({message : "recharge is done"});
+  // res.send({message : "recharge is done"});
 
 });
 ////////////////////////////ENDS////////////////////////////////////////
